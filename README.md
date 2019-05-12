@@ -1,4 +1,4 @@
-# ICMRI_example
+# DeepHCS
 
 ----------
 
