@@ -24,7 +24,9 @@ def main():
   mkdir(config.ckpt_dir+"/ckpt_T2")
   mkdir(config.tmp_dir)
 
-  with tf.Session() as sess:
+  config = tf.ConfigProto()
+  config.gpu_options.allow_growth = True
+  with tf.Session(config=config) as sess:
     trainer = Trainer(sess, dh, config)
     #trainer.restore()
 
